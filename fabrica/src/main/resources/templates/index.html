@@ -7,10 +7,22 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1" />
 	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="/js/controller.js"></script>
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	  
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />	  
 </head>
 <body>
+
+<style>
+	.eliminar {
+	background-color: #ea5757;
+	color: white;
+	border-radius: 7px;
+	}
+	.editar {
+	background-color: #579cea;
+	color: white;
+	border-radius: 7px;
+	}
+</style>
 
 <div class="container" ng-app="app">
 
@@ -45,7 +57,7 @@
 	</div>
 	
 	<div class="col-sm-offset-2 col-sm-10" ng-controller="getcontroller" ng->
-		<button id="btn-id" type="button" class="btn btn-primary" ng-click="getfunction()">Get All Customers</button>
+		<button id="btn-id" type="button" class="btn btn-primary" ng-click="getfunction()">Mostrar Clientes</button>
 
 			<table>
 				<tr>
@@ -56,9 +68,13 @@
 				<tr ng-repeat="cust in response">
 					<td>{{ cust.nombre }}</td>
 					<td>{{ cust.password }}</td>
+					<td><button class="eliminar">Eliminar</button></td>
+					<td><button class="editar">Editar</button></td>
 				</tr>
 			</table>
 		</div>
+
+
 
 	
 </div>

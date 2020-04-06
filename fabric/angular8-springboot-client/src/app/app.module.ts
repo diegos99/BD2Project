@@ -14,6 +14,11 @@ import { CreateRepuestoComponent } from './create-repuesto/create-repuesto.compo
 import { RepuestoDetailsComponent } from './repuesto-details/repuesto-details.component';
 import { RepuestoListComponent } from './repuesto-list/repuesto-list.component';
 import { UpdateRepuestoComponent } from './update-repuesto/update-repuesto.component';
+import { CreateProductoComponent } from './create-producto/create-producto.component';
+import { ProductoListComponent } from './producto-list/producto-list.component';
+import { UpdateProductoComponent } from './update-producto/update-producto.component';
+import { CreatePedidoComponent } from './create-pedido/create-pedido.component';
+import { PedidoListComponent } from './pedido-list/pedido-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { UpdateRepuestoComponent } from './update-repuesto/update-repuesto.compo
     CreateRepuestoComponent,
     RepuestoDetailsComponent,
     RepuestoListComponent,
-    UpdateRepuestoComponent
+    UpdateRepuestoComponent,
+    CreateProductoComponent,
+    ProductoListComponent,
+    UpdateProductoComponent,
+    CreatePedidoComponent,
+    PedidoListComponent
   ],
   imports: [
     BrowserModule,

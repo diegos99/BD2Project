@@ -10,6 +10,13 @@ import { CreateRepuestoComponent } from './create-repuesto/create-repuesto.compo
 import { RepuestoListComponent } from './repuesto-list/repuesto-list.component';
 import { UpdateRepuestoComponent } from './update-repuesto/update-repuesto.component';
 
+import { CreateProductoComponent } from './create-producto/create-producto.component';
+import { ProductoListComponent } from './producto-list/producto-list.component';
+import { UpdateProductoComponent } from './update-producto/update-producto.component';
+
+import { CreatePedidoComponent } from './create-pedido/create-pedido.component';
+import { PedidoListComponent } from './pedido-list/pedido-list.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'employee', pathMatch: 'full' },
   { path: 'employees', component: EmployeeListComponent },
@@ -19,6 +26,12 @@ const routes: Routes = [
   { path: 'repuestos', component: RepuestoListComponent },
   { path: 'addr', component: CreateRepuestoComponent },
   { path: 'updater/:id', component: UpdateRepuestoComponent },
+  { path: 'productos', component: ProductoListComponent },
+  { path: 'addprod', component: CreateProductoComponent },
+  { path: 'updateprod/:id', component: UpdateProductoComponent },
+  { path: 'pedidos', component: PedidoListComponent },
+  { path: 'addped', component: CreatePedidoComponent },
+  
 ];
 
 @NgModule({

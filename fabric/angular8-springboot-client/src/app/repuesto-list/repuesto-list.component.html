@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Repuestos</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Stock</th>
+            <th>No. Parte</th>
+            <th>Precio Venta (Q)</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of repuestos | async">
+            <td>{{employee.nombre}}</td>
+            <td>{{employee.descripcion}}</td>
+            <td>{{employee.stock}}</td>
+            <td>{{employee.no_parte}}</td>
+            <td>{{employee.precio_venta}}</td>
+            <td><button (click)="deleteRepuesto(employee.id)" class="btn btn-danger">Delete</button>
+                <button (click)="updateRepuesto(employee.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

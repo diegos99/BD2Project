@@ -1,0 +1,76 @@
+<h3>Editar Pedido</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">No. pedido</label>
+      <input type="text" class="form-control" id="id" required [(ngModel)]="pedido.id" name="id">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Fecha recibido</label>
+        <input type="text" class="form-control" id="fechaRecibido" required [(ngModel)]="pedido.fechaRecibido" name="fechaRecibido">
+      </div>
+
+    <div class="form-group">
+      <label for="name">Fecha entrega</label>
+      <input type="text" class="form-control" id="fechaEntrega" required [(ngModel)]="pedido.fechaEntrega" name="fechaEntrega">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Estado</label>
+        <input type="text" class="form-control" id="estado" required [(ngModel)]="pedido.estado" name="estado">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Precio Final</label>
+        <input type="text" class="form-control" id="precioFinal" required [(ngModel)]="pedido.precioFinal" name="precioFinal">
+    </div>
+    
+    <h4>Cliente</h4>
+    <div class="form-group">
+        <label for="name">Cliente</label>
+        <input type="text" class="form-control" id="id[0]" required [(ngModel)]="pedido.employee.id" name="id[0]">
+    </div>
+
+    <h4>Repuestos</h4>
+    <div class="form-group">
+        <label for="name">ID Repuesto</label>
+        <input type="text" class="form-control" id="id[0]" required [(ngModel)]="pedido.productos[0].id" name="id[0]">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Repuesto</label>
+        <input type="text" class="form-control" id="name[0]" required [(ngModel)]="pedido.productos[0].name" name="name[0]">
+    </div>
+
+
+    <!-- -----------------SEGUNDO SET DE INFO-------------- -->
+    <h2>_______________________</h2>
+    <div class="form-group">
+        <label for="name">ID Repuesto</label>
+        <input type="text" class="form-control" id="id[1]" required [(ngModel)]="pedido.productos[1].id" name="id[1]">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Repuesto</label>
+        <input type="text" class="form-control" id="name[1]" required [(ngModel)]="pedido.productos[1].name" name="name[1]">
+    </div>
+    
+
+
+    <!-- -----------------TERCER SET DE INFO-------------- -->
+
+    <h2>_______________________</h2>
+    <div class="form-group">
+        <label for="name">ID Repuesto</label>
+        <input type="text" class="form-control" id="id[2]" required [(ngModel)]="pedido.productos[2].id" name="id[2]">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Repuesto</label>
+        <input type="text" class="form-control" id="name[2]" required [(ngModel)]="pedido.productos[2].name" name="name[2]">
+    </div>
+
+    <button type="submit" class="btn btn-success">Editar</button>
+  </form>
+</div>

@@ -19,6 +19,7 @@ import { ProductoListComponent } from './producto-list/producto-list.component';
 import { UpdateProductoComponent } from './update-producto/update-producto.component';
 import { CreatePedidoComponent } from './create-pedido/create-pedido.component';
 import { PedidoListComponent } from './pedido-list/pedido-list.component';
+import { UpdatePedidoComponent } from './update-pedido/update-pedido.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PedidoListComponent } from './pedido-list/pedido-list.component';
     ProductoListComponent,
     UpdateProductoComponent,
     CreatePedidoComponent,
-    PedidoListComponent
+    PedidoListComponent,
+    UpdatePedidoComponent
   ],
   imports: [
     BrowserModule,

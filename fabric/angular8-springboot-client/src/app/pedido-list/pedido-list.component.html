@@ -6,27 +6,37 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>ID</th>
+            <th>No.Pedido</th>
             <th>Fecha Recibido</th>
             <th>Fecha Entrega</th>
             <th>Estado</th>
             <th>Productos</th>
             <th>Cliente</th>
             <th>Precio Final</th>
-            <th>Actions</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let employee of pedidos | async">
-            <td>{{employee.id}}</td>
-            <td>{{employee.fechaRecibido}}</td>
-            <td>{{employee.fechaEntrega}}</td>
-            <td>{{employee.estado}}</td>
-            <td>{{employee.productos}}</td>
-            <td>{{employee.employee}}</td>
-            <td>{{employee.precioFinal}}</td>
-            <td><button (click)="deletePedido(employee.id)" class="btn btn-danger">Delete</button>
-                <button (click)="updatePedido(employee.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          <tr *ngFor="let pedido of pedidos | async">
+            <td>{{pedido.id}}</td>
+            <td>{{pedido.fechaRecibido}}</td>
+            <td>{{pedido.fechaEntrega}}</td>
+            <td>{{pedido.estado}}</td>
+            <td>
+              <tr><b>Id:</b> {{pedido.employee.id}}</tr>
+              <tr><b>Nombre:</b> {{pedido.employee.firstName}}</tr>
+              <tr><b>Email:</b> {{pedido.employee.lastName}}</tr>
+            </td>
+            <td>
+              <ng-container *ngFor="let i of pedido.productos" >
+                <tr><b>Codigo:</b> {{i.id}}</tr>
+                <tr><b>Repuesto:</b> {{i.name}}</tr>
+                ------------------
+               </ng-container>
+            </td>
+            <td>{{pedido.precioFinal}}</td>
+            <td><button (click)="deletePedido(pedido.id)" class="btn btn-danger">Delete</button>
+                <button (click)="updatePedido(pedido.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
             </td>
           </tr>
         </tbody>

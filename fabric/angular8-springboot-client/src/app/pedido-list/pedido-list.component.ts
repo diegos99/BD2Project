@@ -35,7 +35,7 @@ export class PedidoListComponent implements OnInit {
 
 
   updatePedido(id: number){
-    this.router.navigate(['update', id]);
+    this.router.navigate(['updateped', id]);
   }
 
 }

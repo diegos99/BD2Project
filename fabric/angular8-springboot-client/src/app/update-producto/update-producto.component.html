@@ -1,1 +1,84 @@
-<p>update-producto works!</p>
+<h3>Editar Producto</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Codigo producto</label>
+      <input type="text" class="form-control" id="id" required [(ngModel)]="producto.id" name="id">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="producto.name" name="name">
+      </div>
+
+    <div class="form-group">
+      <label for="name">Codigo</label>
+      <input type="text" class="form-control" id="codigo[0]" required [(ngModel)]="producto.vehiculos[0].codigo" name="codigo[0]">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Marca</label>
+        <input type="text" class="form-control" id="marca[0]" required [(ngModel)]="producto.vehiculos[0].marca" name="marca[0]">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Linea</label>
+        <input type="text" class="form-control" id="linea[0]" required [(ngModel)]="producto.vehiculos[0].linea" name="linea[0]">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Año</label>
+        <input type="text" class="form-control" id="anio[0]" required [(ngModel)]="producto.vehiculos[0].anio" name="anio[0]">
+    </div>
+
+
+
+    <!-- -----------------SEGUNDO SET DE INFO-------------- -->
+
+
+    <div class="form-group">
+        <label for="name">Codigo</label>
+        <input type="text" class="form-control" id="codigo[1]" required [(ngModel)]="producto.vehiculos[1].codigo" name="codigo[1]">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Marca</label>
+          <input type="text" class="form-control" id="marca[1]" required [(ngModel)]="producto.vehiculos[1].marca" name="marca[1]">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Linea</label>
+          <input type="text" class="form-control" id="linea[1]" required [(ngModel)]="producto.vehiculos[1].linea" name="linea[1]">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Año</label>
+          <input type="text" class="form-control" id="anio[1]" required [(ngModel)]="producto.vehiculos[1].anio" name="anio[1]">
+      </div>
+
+
+    <!-- -----------------TERCER SET DE INFO-------------- -->
+
+    <div class="form-group">
+        <label for="name">Codigo</label>
+        <input type="text" class="form-control" id="codigo[2]" required [(ngModel)]="producto.vehiculos[2].codigo" name="codigo[2]">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Marca</label>
+          <input type="text" class="form-control" id="marca[2]" required [(ngModel)]="producto.vehiculos[2].marca" name="marca[2]">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Linea</label>
+          <input type="text" class="form-control" id="linea[2]" required [(ngModel)]="producto.vehiculos[2].linea" name="linea[2]">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Año</label>
+          <input type="text" class="form-control" id="anio[2]" required [(ngModel)]="producto.vehiculos[2].anio" name="anio[2]">
+      </div>
+
+    <button type="submit" class="btn btn-success">Editar</button>
+  </form>
+</div>

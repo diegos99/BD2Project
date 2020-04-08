@@ -16,6 +16,7 @@ import { UpdateProductoComponent } from './update-producto/update-producto.compo
 
 import { CreatePedidoComponent } from './create-pedido/create-pedido.component';
 import { PedidoListComponent } from './pedido-list/pedido-list.component';
+import { UpdatePedidoComponent } from './update-pedido/update-pedido.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'employee', pathMatch: 'full' },
@@ -23,14 +24,18 @@ const routes: Routes = [
   { path: 'add', component: CreateEmployeeComponent },
   { path: 'update/:id', component: UpdateEmployeeComponent },
   { path: 'details/:id', component: EmployeeDetailsComponent },
+
   { path: 'repuestos', component: RepuestoListComponent },
   { path: 'addr', component: CreateRepuestoComponent },
   { path: 'updater/:id', component: UpdateRepuestoComponent },
+
   { path: 'productos', component: ProductoListComponent },
   { path: 'addprod', component: CreateProductoComponent },
   { path: 'updateprod/:id', component: UpdateProductoComponent },
+  
   { path: 'pedidos', component: PedidoListComponent },
   { path: 'addped', component: CreatePedidoComponent },
+  { path: 'updateped/:id', component: UpdatePedidoComponent },
   
 ];
 

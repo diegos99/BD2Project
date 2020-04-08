@@ -4,7 +4,7 @@ export class Pedido {
     fechaEntrega: string;
     estado: string;
     productos: any[]=[];
-    employee: object;
+    employee: any[]=[];
     precioFinal: string;
     active: boolean;
 }

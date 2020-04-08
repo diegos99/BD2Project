@@ -19,7 +19,7 @@ export class CreateProductoComponent implements OnInit {
   ngOnInit() {
   }
 
-  newEmployee(): void {
+  newProducto(): void {
     this.submitted = false;
     this.producto = new Producto();
   }
@@ -33,7 +33,7 @@ export class CreateProductoComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.save();    
+    this.save();
   }
 
   gotoList() {

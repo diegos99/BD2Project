@@ -17,6 +17,10 @@ public class Pedido {
 	private Employee employee;
 	private String precioFinal;
 
+	public Pedido() {
+		
+	}
+
 	public Pedido(int id, String fechaRecibido, String fechaEntrega, String estado, List<Producto> productos,
 			Employee employee, String precioFinal) {
 		this.id = id;

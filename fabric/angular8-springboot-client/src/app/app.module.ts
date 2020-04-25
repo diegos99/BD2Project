@@ -21,6 +21,11 @@ import { CreatePedidoComponent } from './create-pedido/create-pedido.component';
 import { PedidoListComponent } from './pedido-list/pedido-list.component';
 import { UpdatePedidoComponent } from './update-pedido/update-pedido.component';
 
+import { ExternalService } from './external.service';
+import { PedidosListComponent } from './pedidos-list/pedidos-list.component';
+import { UpdatePedidosComponent } from './update-pedidos/update-pedidos.component';
+import { CreatePedidosComponent } from './create-pedidos/create-pedidos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +42,10 @@ import { UpdatePedidoComponent } from './update-pedido/update-pedido.component';
     UpdateProductoComponent,
     CreatePedidoComponent,
     PedidoListComponent,
-    UpdatePedidoComponent
+    UpdatePedidoComponent,
+    PedidosListComponent,
+    UpdatePedidosComponent,
+    CreatePedidosComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +53,7 @@ import { UpdatePedidoComponent } from './update-pedido/update-pedido.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ExternalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

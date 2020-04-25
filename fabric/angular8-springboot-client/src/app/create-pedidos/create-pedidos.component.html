@@ -1,0 +1,33 @@
+<h3>Crear Pedido</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">No. pedido</label>
+        <input type="text" class="form-control" id="id" required [(ngModel)]="pedido.id" name="id">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Fecha recibido</label>
+          <input type="text" class="form-control" id="fechaEnvio" required [(ngModel)]="pedido.fechaEnvio" name="fechaEnvio">
+        </div>
+  
+      <div class="form-group">
+        <label for="name">Producto</label>
+        <input type="text" class="form-control" id="producto" required [(ngModel)]="pedido.producto" name="producto">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Descripcion</label>
+          <input type="text" class="form-control" id="descripcion" required [(ngModel)]="pedido.descripcion" name="descripcion">
+      </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+
+

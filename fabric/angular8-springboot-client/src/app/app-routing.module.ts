@@ -22,6 +22,8 @@ import { PedidosListComponent } from './pedidos-list/pedidos-list.component';
 import { UpdatePedidosComponent } from './update-pedidos/update-pedidos.component';
 import { CreatePedidosComponent } from './create-pedidos/create-pedidos.component';
 
+import { VentasListComponent } from './ventas-list/ventas-list.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'employee', pathMatch: 'full' },
   { path: 'employees', component: EmployeeListComponent },
@@ -44,6 +46,8 @@ const routes: Routes = [
   { path: 'pedido', component: PedidosListComponent },
   { path: 'addpedido', component: CreatePedidosComponent },
   { path: 'updatepedido/:id', component: UpdatePedidosComponent },
+
+  { path: 'ventas', component: VentasListComponent },
 ];
 
 @NgModule({

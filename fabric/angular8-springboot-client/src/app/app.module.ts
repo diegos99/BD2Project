@@ -25,6 +25,7 @@ import { ExternalService } from './external.service';
 import { PedidosListComponent } from './pedidos-list/pedidos-list.component';
 import { UpdatePedidosComponent } from './update-pedidos/update-pedidos.component';
 import { CreatePedidosComponent } from './create-pedidos/create-pedidos.component';
+import { VentasListComponent } from './ventas-list/ventas-list.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CreatePedidosComponent } from './create-pedidos/create-pedidos.componen
     UpdatePedidoComponent,
     PedidosListComponent,
     UpdatePedidosComponent,
-    CreatePedidosComponent
+    CreatePedidosComponent,
+    VentasListComponent
   ],
   imports: [
     BrowserModule,

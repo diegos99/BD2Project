@@ -26,6 +26,8 @@ import { PedidosListComponent } from './pedidos-list/pedidos-list.component';
 import { UpdatePedidosComponent } from './update-pedidos/update-pedidos.component';
 import { CreatePedidosComponent } from './create-pedidos/create-pedidos.component';
 import { VentasListComponent } from './ventas-list/ventas-list.component';
+import { RepueListComponent } from './repue-list/repue-list.component';
+import { Venta2ListComponent } from './venta2-list/venta2-list.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { VentasListComponent } from './ventas-list/ventas-list.component';
     PedidosListComponent,
     UpdatePedidosComponent,
     CreatePedidosComponent,
-    VentasListComponent
+    VentasListComponent,
+    RepueListComponent,
+    Venta2ListComponent
   ],
   imports: [
     BrowserModule,

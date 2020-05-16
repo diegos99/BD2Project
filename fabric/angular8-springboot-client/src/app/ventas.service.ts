@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class VentasService {
   private baseUrl = 'http://127.0.0.1:8000/factura/buscar_facturas?id=';
+  private base2Url = 'http://127.0.0.1:8000/factura/buscar_facturas?id=';
   constructor(private http: HttpClient) { }
 
   getRepuesto(id: number): Observable<any> {
@@ -28,5 +29,8 @@ export class VentasService {
 
   getVentasList(): Observable<any> {
     return this.http.get(`${this.baseUrl}`);
+  }
+  getVentas2List(): Observable<any> {
+    return this.http.get(`${this.base2Url}`);
   }
 }

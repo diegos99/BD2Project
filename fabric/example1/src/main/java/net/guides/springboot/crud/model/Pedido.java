@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * 
  * @author diego
- * @deprecated
+ * 
  */
 @Document(collection = "Pedido")
 public class Pedido {

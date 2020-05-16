@@ -6,11 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
-/**
- * 
- * @author diego
- *@deprecated
- */
+
 @Document(collection = "Producto")
 public class Producto {
 		
@@ -18,11 +14,13 @@ public class Producto {
 	  private int id;
 	    private String name;
 	    private List<Vehiculo> vehiculos;
+	    private String imagen;
 	    
-		public Producto(int id, String name, List<Vehiculo> vehiculos) {
+		public Producto(int id, String name, List<Vehiculo> vehiculos, String imagen) {
 			this.id = id;
 			this.name = name;
 			this.vehiculos = vehiculos;
+			this.imagen = imagen;
 		}
 
 		public int getId() {
@@ -48,11 +46,27 @@ public class Producto {
 		public void setVehiculos(List<Vehiculo> vehiculos) {
 			this.vehiculos = vehiculos;
 		}
+		/**
+		 * 
+		 * @param imagen
+		 */
+			public void setImagen(String imagen) {
+				this.imagen = imagen;
+			}
+			/**
+			 * 
+			 * @return imagen
+			 */
+				public String getImagen() {
+					return imagen;
+				}
 
-		@Override
-		public String toString() {
-			return "Producto [id=" + id + ", name=" + name + ", vehiculos=" + vehiculos + "]";
-		}
+			@Override
+			public String toString() {
+				return "Producto [id=" + id + ", name=" + name + ", vehiculos=" + vehiculos + ", imagen=" + imagen
+						+ "]";
+			}
+		
 	    
 	    
 }

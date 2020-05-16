@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * 
  * @author diego
- *
+ *@deprecated
  */
 @Document (collection = "Repuesto")
 public class Repuesto {
@@ -29,6 +29,7 @@ public class Repuesto {
 	private String stock;
 	private String no_parte;
 	private String precio_venta;
+	private String imagen;
 	/**
 	 * 
 	 * @param nombre
@@ -38,12 +39,13 @@ public class Repuesto {
 	 * @param precio_venta
 	 */
 	public Repuesto(String nombre, String descripcion, String stock, String no_parte,
-			String precio_venta) {
+			String precio_venta, String imagen) {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.stock = stock;
 		this.no_parte = no_parte;
 		this.precio_venta = precio_venta;
+		this.imagen = imagen;
 	}
 /**
  * 
@@ -122,19 +124,34 @@ public class Repuesto {
 	public String getPrecio_venta() {
 		return precio_venta;
 	}
+	
+	/**
+	 * 
+	 * @param precio_venta
+	 */
+		public void setPrecio_venta(String precio_venta) {
+			this.precio_venta = precio_venta;
+		}
 /**
  * 
- * @param precio_venta
+ * @param imagen
  */
-	public void setPrecio_venta(String precio_venta) {
-		this.precio_venta = precio_venta;
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
-
+	/**
+	 * 
+	 * @return imagen
+	 */
+		public String getImagen() {
+			return imagen;
+		}
 	@Override
 	public String toString() {
 		return "Repuesto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", stock=" + stock
-				+ ", no_parte=" + no_parte + ", precio_venta=" + precio_venta + "]";
+				+ ", no_parte=" + no_parte + ", precio_venta=" + precio_venta + ", imagen=" + imagen + "]";
 	}
+	
 	
 	
 	

@@ -16,12 +16,20 @@ import net.guides.springboot.crud.model.RepuestoDatabaseSequence;
 @Service
 public class RepuestoSequenceGeneratorService {
 	private MongoOperations mongoOperations;
-
+/**
+ * 
+ * @param mongoOperations
+ */
     @Autowired
     public RepuestoSequenceGeneratorService(MongoOperations mongoOperations) {
         this.mongoOperations = mongoOperations;
     }
-
+/**
+ * 
+ * @param seqName
+ * 
+ * @return !Objects.isNull(counter) ? counter.getSeq() : 1;
+ */
     public long generateSequence(String seqName) {
 
     	RepuestoDatabaseSequence counter = mongoOperations.findAndModify(query(where("_id").is(seqName)),

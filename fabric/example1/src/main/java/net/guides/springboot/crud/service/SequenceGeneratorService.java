@@ -17,12 +17,19 @@ import net.guides.springboot.crud.model.DatabaseSequence;
 public class SequenceGeneratorService {
 
     private MongoOperations mongoOperations;
-
+/**
+ * 
+ * @param mongoOperations
+ */
     @Autowired
     public SequenceGeneratorService(MongoOperations mongoOperations) {
         this.mongoOperations = mongoOperations;
     }
-
+/**
+ * 
+ * @param seqName
+ * @return !Objects.isNull(counter) ? counter.getSeq() : 1;
+ */
     public long generateSequence(String seqName) {
 
         DatabaseSequence counter = mongoOperations.findAndModify(query(where("_id").is(seqName)),

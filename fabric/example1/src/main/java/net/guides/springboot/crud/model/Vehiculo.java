@@ -8,6 +8,12 @@ import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * 
+ * @author diego
+ *@deprecated
+ */
+
 /*@Document (collection = "Vehiculo")*/
 public class Vehiculo {
 	

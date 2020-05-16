@@ -16,12 +16,19 @@ import net.guides.springboot.crud.model.VehiculoDatabaseSequence;
 @Service
 public class VehiculoSequenceGeneratorService {
 	 private MongoOperations mongoOperations;
-
+/**
+ * 
+ * @param mongoOperations
+ */
     @Autowired
     public VehiculoSequenceGeneratorService(MongoOperations mongoOperations) {
         this.mongoOperations = mongoOperations;
     }
-
+/**
+ * 
+ * @param seqName
+ * @return !Objects.isNull(counter) ? counter.getSeq() : 1;
+ */
     public long generateSequence(String seqName) {
 
     	VehiculoDatabaseSequence counter = mongoOperations.findAndModify(query(where("_id").is(seqName)),

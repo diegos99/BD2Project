@@ -23,7 +23,11 @@ import net.guides.springboot.crud.exception.ResourceNotFoundException;
 import net.guides.springboot.crud.model.Repuesto;
 import net.guides.springboot.crud.repository.RepuestoRepository;
 import net.guides.springboot.crud.service.RepuestoSequenceGeneratorService;
-
+/**
+ * 
+ * @author diego
+ *
+ */
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/v1")

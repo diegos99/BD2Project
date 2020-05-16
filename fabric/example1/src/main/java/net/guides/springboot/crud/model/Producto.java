@@ -6,7 +6,11 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
-
+/**
+ * 
+ * @author diego
+ *@deprecated
+ */
 @Document(collection = "Producto")
 public class Producto {
 		

@@ -8,6 +8,11 @@ import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * 
+ * @author diego
+ *
+ */
 @Document (collection = "Repuesto")
 public class Repuesto {
 	@Transient
@@ -24,7 +29,14 @@ public class Repuesto {
 	private String stock;
 	private String no_parte;
 	private String precio_venta;
-	
+	/**
+	 * 
+	 * @param nombre
+	 * @param descripcion
+	 * @param stock
+	 * @param no_parte
+	 * @param precio_venta
+	 */
 	public Repuesto(String nombre, String descripcion, String stock, String no_parte,
 			String precio_venta) {
 		this.nombre = nombre;
@@ -33,51 +45,87 @@ public class Repuesto {
 		this.no_parte = no_parte;
 		this.precio_venta = precio_venta;
 	}
-
+/**
+ * 
+ * @return id
+ */
 	public long getId() {
 		return id;
 	}
-
+/**
+ * 
+ * @param id
+ */
 	public void setId(long id) {
 		this.id = id;
 	}
-
+/**
+ * 
+ * @return nombre
+ */
 	public String getNombre() {
 		return nombre;
 	}
-
+/**
+ * 
+ * @param nombre
+ */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
+/**
+ * 
+ * @return descripcion
+ */
 	public String getDescripcion() {
 		return descripcion;
 	}
-
+/**
+ * 
+ * @param descripcion
+ */
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
+/**
+ * stock
+ * @return
+ */
 	public String getStock() {
 		return stock;
 	}
-
+/**
+ * 
+ * @param stock
+ */
 	public void setStock(String stock) {
 		this.stock = stock;
 	}
-
+/**
+ * 
+ * @return no_parte
+ */
 	public String getNo_parte() {
 		return no_parte;
 	}
-
+/**
+ * 
+ * @param no_parte
+ */
 	public void setNo_parte(String no_parte) {
 		this.no_parte = no_parte;
 	}
-
+/**
+ * 
+ * @return precio_venta
+ */
 	public String getPrecio_venta() {
 		return precio_venta;
 	}
-
+/**
+ * 
+ * @param precio_venta
+ */
 	public void setPrecio_venta(String precio_venta) {
 		this.precio_venta = precio_venta;
 	}

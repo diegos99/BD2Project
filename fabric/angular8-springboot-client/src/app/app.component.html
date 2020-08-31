@@ -1,0 +1,89 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <!-- Links -->
+  <!-- <ul class="navbar-nav">
+    <li class="nav-item">
+        <a routerLink="employees" class="nav-link" routerLinkActive="active">Employee List</a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="add" class="nav-link" routerLinkActive="active">Add Employee</a>
+    </li>
+  </ul> -->
+
+  <div id="header">
+    <ul class="nav">
+      <li><a href="">Inicio</a></li>
+      <li><a href="">Clientes</a>
+        <ul>
+          <li><a routerLink="fabrica1/employees" class="nav-link" routerLinkActive="active">Lista</a></li>
+          <li><a routerLink="add" class="nav-link" routerLinkActive="active">Nuevo Cliente</a></li>
+        </ul>
+      </li>
+      <!-- <li><a href="">Repuestos</a>
+        <ul>
+          <li><a routerLink="repuestos" class="nav-link" routerLinkActive="active">Lista</a></li>
+          <li><a routerLink="addr" class="nav-link" routerLinkActive="active">Nuevo repuesto</a></li>
+        </ul>
+      </li> -->
+      <li><a href="">Repuestos</a>
+        <ul>
+          <li><a routerLink="fabrica1/productos" class="nav-link" routerLinkActive="active">Lista</a></li>
+          <li><a routerLink="addprod" class="nav-link" routerLinkActive="active">Nuevo repuesto</a></li>
+        </ul>
+      </li>
+      <li><a href="">Pedidos</a>
+        <ul>
+          <li><a routerLink="fabrica1/pedido" class="nav-link" routerLinkActive="active">Lista</a></li>
+          <li><a routerLink="addpedido" class="nav-link" routerLinkActive="active">Nuevo pedido</a></li>
+        </ul>
+      </li>
+      <li><a href="">Ventas</a>
+        <ul>
+          <li><a routerLink="fabrica1/ventas" class="nav-link" routerLinkActive="active">Lista</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br>
+<div class="container">
+  <h2 style="text-align: center;">{{title}}</h2>
+  <hr>  
+  <div class="card">
+    <div class="card-body">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<!-- <table>
+  <tr>
+    <th>ID</th>
+    <th>Post Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Body</th>
+  </tr>
+
+  <tr *ngFor="let com of listcomments">
+    <td>{{com.id}}</td>
+    <td>{{com.postId}}</td>
+    <td>{{com.name}}</td>
+    <td>{{com.email}}</td>
+    <td>{{com.body}}</td>
+  </tr>
+</table>
+
+<h2>PRUEBA JEJE</h2>
+<p>id: {{objposts?.id}}</p>
+<p>userid: {{objposts?.userId}}</p>
+<p>title: {{objposts?.title}}</p>
+<p>body: {{objposts?.body}}</p> -->
+<br>
+<footer class="footer">
+  <div class="container">
+      <span><b>All Rights Reserved 2019 - Sistema de fábrica</b></span>
+  </div>
+</footer>

@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Productos</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Repuesto</th>
+            <th>Vehiculos compatibles</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of repue | async">
+            <td>{{producto.id}}</td>
+            <td>{{producto.name}}</td>
+            <td> <img src="{{producto.imagen}}" style="width: 200px; height: 200px;"> </td>
+            <td>
+              <ng-container *ngFor="let i of producto.vehiculos" >
+                <tr><b>Codigo:</b> {{i.codigo}}</tr>
+                <tr><b>Marca:</b> {{i.marca}}</tr>
+                <tr><b>Linea:</b> {{i.linea}}</tr>
+                <tr><b>Año:</b> {{i.anio}}</tr>
+                --------------------------------
+               </ng-container>
+            </td>
+            <td><button (click)="deleteProducto(producto.id)" class="btn btn-danger">Delete</button>
+                <button (click)="updateProducto(producto.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            </td>
+          </tr>
+          <tr>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

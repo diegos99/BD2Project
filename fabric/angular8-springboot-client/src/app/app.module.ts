@@ -25,6 +25,9 @@ import { ExternalService } from './external.service';
 import { PedidosListComponent } from './pedidos-list/pedidos-list.component';
 import { UpdatePedidosComponent } from './update-pedidos/update-pedidos.component';
 import { CreatePedidosComponent } from './create-pedidos/create-pedidos.component';
+import { VentasListComponent } from './ventas-list/ventas-list.component';
+import { RepueListComponent } from './repue-list/repue-list.component';
+import { Venta2ListComponent } from './venta2-list/venta2-list.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { CreatePedidosComponent } from './create-pedidos/create-pedidos.componen
     UpdatePedidoComponent,
     PedidosListComponent,
     UpdatePedidosComponent,
-    CreatePedidosComponent
+    CreatePedidosComponent,
+    VentasListComponent,
+    RepueListComponent,
+    Venta2ListComponent
   ],
   imports: [
     BrowserModule,

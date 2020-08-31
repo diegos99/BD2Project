@@ -1,45 +1,31 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h2>Pedidos</h2>
-    </div>
-    <div class="panel-body">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>No.Pedido</th>
-            <th>Fecha Recibido</th>
-            <th>Fecha Entrega</th>
-            <th>Estado</th>
-            <th>Productos</th>
-            <th>Cliente</th>
-            <th>Precio Final</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let pedido of pedidos | async">
-            <td>{{pedido.id}}</td>
-            <td>{{pedido.fechaRecibido}}</td>
-            <td>{{pedido.fechaEntrega}}</td>
-            <td>{{pedido.estado}}</td>
-            <td>
-              <tr><b>Id:</b> {{pedido.employee.id}}</tr>
-              <tr><b>Nombre:</b> {{pedido.employee.firstName}}</tr>
-              <tr><b>Email:</b> {{pedido.employee.lastName}}</tr>
-            </td>
-            <td>
-              <ng-container *ngFor="let i of pedido.productos" >
-                <tr><b>Codigo:</b> {{i.id}}</tr>
-                <tr><b>Repuesto:</b> {{i.name}}</tr>
-                ------------------
-               </ng-container>
-            </td>
-            <td>{{pedido.precioFinal}}</td>
-            <td><button (click)="deletePedido(pedido.id)" class="btn btn-danger">Delete</button>
-                <button (click)="updatePedido(pedido.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="panel-heading">
+    <h2>Pedidos</h2>
   </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>No.Pedido</th>
+          <th>Fecha Recibido</th>
+          <th>Producto</th>
+          <th>Descripcion</th>
+          <th>Cantidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pedido of pedidos | async">
+          <td>{{pedido.id}}</td>
+          <td>{{pedido.fechaEnvio}}</td>
+          <td>{{pedido.producto}}</td>
+          <td>{{pedido.descripcion}}</td>
+          <td>{{pedido.cantidad}}</td>
+          <td><button (click)="deletePedido(pedido.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updatePedido(pedido.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Ventas Repuestos JJ</h2>
+    </div>
+    <div class="panel-body" id="content" #content>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>No. Factura</th>
+            <th>Fábrica</th>
+            <th>Producto</th>
+            <th>Descripcion</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of detalleFactura | async">
+            <td>{{employee.fields.factura}}</td>
+            <td>{{employee.fields.fabrica}}</td>
+            <td>{{employee.fields.producto}}</td>
+            <td>{{employee.fields.descripcion}}</td>
+            <td>{{employee.fields.cantidad}}</td>
+            <td>{{employee.fields.subtotal}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button
+              class=" btn btn-primary animation-on-hover pull-right"
+              type="submit"
+              (click)="downloadExcel()"
+            >
+              Generar Excel
+            </button>
+            <button
+              class=" btn btn-primary animation-on-hover pull-right"
+              type="submit"
+              (click)="downloadPDF()"
+            >
+              Generar PDF
+            </button>
+    </div>
+  </div>

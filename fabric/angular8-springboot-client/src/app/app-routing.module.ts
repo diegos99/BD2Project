@@ -22,28 +22,37 @@ import { PedidosListComponent } from './pedidos-list/pedidos-list.component';
 import { UpdatePedidosComponent } from './update-pedidos/update-pedidos.component';
 import { CreatePedidosComponent } from './create-pedidos/create-pedidos.component';
 
+import { VentasListComponent } from './ventas-list/ventas-list.component';
+import { Venta2ListComponent } from './venta2-list/venta2-list.component';
+import { RepueListComponent } from './repue-list/repue-list.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'employee', pathMatch: 'full' },
-  { path: 'employees', component: EmployeeListComponent },
+  { path: 'fabrica1/employees', component: EmployeeListComponent },
   { path: 'add', component: CreateEmployeeComponent },
   { path: 'update/:id', component: UpdateEmployeeComponent },
   { path: 'details/:id', component: EmployeeDetailsComponent },
 
-  { path: 'repuestos', component: RepuestoListComponent },
+  { path: 'fabrica2/employees', component: RepuestoListComponent },
   { path: 'addr', component: CreateRepuestoComponent },
   { path: 'updater/:id', component: UpdateRepuestoComponent },
 
-  { path: 'productos', component: ProductoListComponent },
+  { path: 'fabrica1/productos', component: ProductoListComponent },
   { path: 'addprod', component: CreateProductoComponent },
   { path: 'updateprod/:id', component: UpdateProductoComponent },
   
-  { path: 'pedidos', component: PedidoListComponent },
+  { path: 'fabrica2/productos', component: RepueListComponent },
+
+  { path: 'fabrica2/pedido', component: PedidoListComponent },
   { path: 'addped', component: CreatePedidoComponent },
   { path: 'updateped/:id', component: UpdatePedidoComponent },
 
-  { path: 'pedido', component: PedidosListComponent },
+  { path: 'fabrica1/pedido', component: PedidosListComponent },
   { path: 'addpedido', component: CreatePedidosComponent },
   { path: 'updatepedido/:id', component: UpdatePedidosComponent },
+
+  { path: 'fabrica1/ventas', component: VentasListComponent },
+  { path: 'fabrica2/ventas', component: Venta2ListComponent },
 ];
 
 @NgModule({

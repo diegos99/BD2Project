@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RepuestoService {
-  private baseUrl = 'http://localhost:8080/api/v1/repuestos';
+  private baseUrl = 'http://localhost:8090/api/v1/employees';
   constructor(private http: HttpClient) { }
 
   getRepuesto(id: number): Observable<any> {

@@ -4,7 +4,11 @@ import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
+/**
+ * 
+ * @author diego
+ * 
+ */
 @Document(collection = "Pedido")
 public class Pedido {
 
@@ -20,7 +24,16 @@ public class Pedido {
 	public Pedido() {
 		
 	}
-
+/**
+ * @deprecated
+ * @param id
+ * @param fechaRecibido
+ * @param fechaEntrega
+ * @param estado
+ * @param productos
+ * @param employee
+ * @param precioFinal
+ */
 	public Pedido(int id, String fechaRecibido, String fechaEntrega, String estado, List<Producto> productos,
 			Employee employee, String precioFinal) {
 		this.id = id;

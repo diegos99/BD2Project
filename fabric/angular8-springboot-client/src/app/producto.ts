@@ -8,5 +8,6 @@ export class Producto {
     id: number;
     name: string;
     vehiculos: any[]=[];
+    imagen: string;
     active: boolean;
 }
